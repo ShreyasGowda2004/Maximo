@@ -1,0 +1,45 @@
+[
+  {
+    "id": "UC001",
+    "title": "How to create a file in Java",
+    "description": "Create a new file using Java's File class and handle exceptions properly.",
+    "steps": [
+      "Import java.io.File and java.io.IOException.",
+      "Create a File object with the desired file path.",
+      "Call createNewFile() method.",
+      "Check the returned boolean value to confirm creation."
+    ],
+    "code": "import java.io.File; \nimport java.io.IOException; \npublic class CreateFileExample { \n    public static void main(String[] args) { \n        try { \n            File file = new File(\"example.txt\"); \n            if (file.createNewFile()) { \n                System.out.println(\"File created: \" + file.getName()); \n            } else { \n                System.out.println(\"File already exists.\"); \n            } \n        } catch (IOException e) { \n            System.out.println(\"An error occurred.\"); \n            e.printStackTrace(); \n        } \n    } \n}",
+    "category": "Java",
+    "tags": ["file", "java", "io"]
+  },
+  {
+    "id": "UC002",
+    "title": "How to connect to MongoDB in Spring Boot",
+    "description": "Use Spring Data MongoDB to connect your Spring Boot application to MongoDB.",
+    "steps": [
+      "Add Spring Data MongoDB dependency in pom.xml.",
+      "Configure MongoDB connection in application.properties.",
+      "Create a model class with @Document annotation.",
+      "Create a repository interface extending MongoRepository.",
+      "Inject and use the repository in your service or controller."
+    ],
+    "code": "spring.data.mongodb.uri=mongodb://localhost:27017/mydb",
+    "category": "Spring Boot",
+    "tags": ["mongodb", "spring boot", "database"]
+  },
+  {
+    "id": "UC003",
+    "title": "How to send HTTP request in Python",
+    "description": "Use the requests library to send HTTP GET and POST requests in Python.",
+    "steps": [
+      "Install requests using pip install requests.",
+      "Import requests in your Python file.",
+      "Use requests.get() or requests.post() with URL.",
+      "Handle the response object."
+    ],
+    "code": "import requests\nresponse = requests.get('https://api.example.com/data')\nprint(response.json())",
+    "category": "Python",
+    "tags": ["http", "python", "api"]
+  }
+]
